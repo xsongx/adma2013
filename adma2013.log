@@ -1,12 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.6)  2 SEP 2013 10:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.14)  3 SEP 2013 06:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **adma2013.tex
 (./adma2013.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, th
-ai, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, uk
+english, thai, loaded.
 (./llncs.cls
 Document Class: llncs 2010/07/12 v2.17 
  LaTeX document class for Lecture Notes in Computer Science
@@ -182,18 +191,18 @@ Package: mdwlist 1996/05/02 1.1 Various list-related things
 ) (./adma2013.aux)
 \openout1 = `adma2013.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
@@ -255,25 +264,77 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Title too long for running head. Please supply
-a shorter form with \titlerunning prior to \maketitle
+
+LaTeX Warning: Citation `xsongx:b1' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation `xsongx:b2' on page 1 undefined on input line 56.
+
+
+LaTeX Warning: Citation `xsongx:b6' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `DBLP:conf/hicss/StieglitzD12' on page 1 undefined on i
+nput line 62.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `xsongx:b4' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `xsongx:b1' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `Barbosa:2010RSD' on page 2 undefined on input line 84.
+
+
+
+LaTeX Warning: Citation `Hu:2013www' on page 2 undefined on input line 86.
+
+
+LaTeX Warning: Citation `xsongx:b6' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Wang:2011TSA' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `AsiaeeT:2012' on page 2 undefined on input line 91.
+
+
+LaTeX Warning: Citation `Hu:2013ESR' on page 2 undefined on input line 92.
+
+
+LaTeX Warning: Citation `CalaisGuerra:2011BOT' on page 2 undefined on input lin
+e 93.
+
+
+LaTeX Warning: Citation `Thelwall:2010SSS' on page 2 undefined on input line 94
+.
+
+
+LaTeX Warning: Citation `Thelwall:2012SSD' on page 2 undefined on input line 94
+.
+
+
+LaTeX Warning: Citation `Zhao:2012UTM' on page 2 undefined on input line 95.
+
+[2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
@@ -286,7 +347,7 @@ Missing character: There is no ô in font cmr10!
 \c@hypothese=\count123
 
 [4]
-Overfull \hbox (20.17091pt too wide) in paragraph at lines 136--140
+Overfull \hbox (20.17091pt too wide) in paragraph at lines 135--139
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = []$ de-notes the 
 gen-eral part of fea-ture space; $\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = []$
  []
@@ -294,6 +355,18 @@ gen-eral part of fea-ture space; $\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = []$
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
+
+LaTeX Warning: Citation `xsongx:b17' on page 5 undefined on input line 152.
+
+
+LaTeX Warning: Citation `xsongx:b18' on page 5 undefined on input line 152.
+
+
+LaTeX Warning: Citation `xsongx:b19' on page 5 undefined on input line 152.
+
+
+LaTeX Warning: Citation `xsongx:b20' on page 5 undefined on input line 152.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -334,49 +407,60 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [6] <itse13.jpg, id=34, 652.68843pt x 261.97874pt>
+
+
+LaTeX Warning: Citation `xsongx:b36' on page 6 undefined on input line 188.
+
+
+LaTeX Warning: Citation `xsongx:b37' on page 6 undefined on input line 188.
+
+[6] <itse13.jpg, id=34, 652.68843pt x 261.97874pt>
 File: itse13.jpg Graphic file (type jpg)
  <use itse13.jpg>
-Package pdftex.def Info: itse13.jpg used on input line 200.
+Package pdftex.def Info: itse13.jpg used on input line 199.
 (pdftex.def)             Requested size: 397.50197pt x 252.95181pt.
 
-Overfull \hbox (50.37843pt too wide) in paragraph at lines 200--201
+Overfull \hbox (50.37843pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
-[7 <./itse13.jpg>] [8]
+[7 <./itse13.jpg>]
+
+LaTeX Warning: Citation `xsongx:b27' on page 8 undefined on input line 229.
+
+
+LaTeX Warning: Citation `xsongx:b28' on page 8 undefined on input line 229.
+
+[8]
 Missing character: There is no √ in font cmr10!
 Missing character: There is no Ø in font cmr10!
- [9] (./adma2013.bbl [10]
-Missing character: There is no √ in font cmr9!
-Missing character: There is no † in font cmr9!
-) [11] (./adma2013.aux) ) 
+ [9] (./adma2013.bbl) [10] (./adma2013.aux) ) 
 Here is how much of TeX's memory you used:
- 2334 strings out of 495049
- 31105 string characters out of 3181741
- 96732 words of memory out of 3000000
- 5482 multiletter control sequences out of 15000+200000
+ 2334 strings out of 493473
+ 31105 string characters out of 3143122
+ 97882 words of memory out of 3000000
+ 5603 multiletter control sequences out of 15000+200000
  11139 words of font info for 43 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 965 hyphenation exceptions out of 8191
  37i,11n,24p,378b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt9.pfb>
-Output written on adma2013.pdf (11 pages, 246861 bytes).
+</usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt9.pfb>
+Output written on adma2013.pdf (10 pages, 238007 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
