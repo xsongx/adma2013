@@ -1,0 +1,149 @@
+\begin{thebibliography}{10}
+
+\bibitem{xsongx:b1}
+Liu, B.:
+\newblock Sentiment Analysis and Opinion Mining.
+\newblock Synthesis Lectures on Human Language Technologies. Morgan {\&}
+  Claypool Publishers (2012)
+
+\bibitem{xsongx:b2}
+Pang, B., Lee, L.:
+\newblock Opinion mining and sentiment analysis.
+\newblock Foundations and Trends in Information Retrieval \textbf{2}(1-2)
+  (2007)  1--135
+
+\bibitem{xsongx:b6}
+Jiang, L., Yu, M., Zhou, M., Liu, X., Zhao, T.:
+\newblock {Target-dependent Twitter sentiment classification}.
+\newblock In: Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies - Volume 1. HLT '11,
+  Stroudsburg, PA, USA, Association for Computational Linguistics (2011)
+  151--160
+
+\bibitem{DBLP:conf/hicss/StieglitzD12}
+Stieglitz, S., Dang-Xuan, L.:
+\newblock Political communication and influence through microblogging-an
+  empirical analysis of sentiment in twitter messages and retweet behavior.
+\newblock In: HICSS, IEEE Computer Society (2012)  3500--3509
+
+\bibitem{xsongx:b4}
+Pang, B., Lee, L., Vaithyanathan, S.:
+\newblock {Thumbs up?: sentiment classification using machine learning
+  techniques}.
+\newblock In: Proceedings of the ACL-02 conference on Empirical methods in
+  natural language processing - Volume 10. EMNLP '02, Stroudsburg, PA, USA,
+  Association for Computational Linguistics (2002)  79--86
+
+\bibitem{Barbosa:2010RSD}
+Barbosa, L., Feng, J.:
+\newblock Robust sentiment detection on twitter from biased and noisy data.
+\newblock In: Proceedings of the 23rd International Conference on Computational
+  Linguistics: Posters. COLING '10, Stroudsburg, PA, USA, Association for
+  Computational Linguistics (2010)  36--44
+
+\bibitem{Hu:2013www}
+Hu, X., Tang, J., Gao, H., Liu, H.:
+\newblock Unsupervised sentiment analysis with emotional signals.
+\newblock In: Proceedings of the 22nd international conference on World Wide
+  Web. WWW '13, Republic and Canton of Geneva, Switzerland, International World
+  Wide Web Conferences Steering Committee (2013)  607--618
+
+\bibitem{Wang:2011TSA}
+Wang, X., Wei, F., Liu, X., Zhou, M., Zhang, M.:
+\newblock Topic sentiment analysis in twitter: a graph-based hashtag sentiment
+  classification approach.
+\newblock In: Proceedings of the 20th ACM international conference on
+  Information and knowledge management. CIKM '11, New York, NY, USA, ACM (2011)
+   1031--1040
+
+\bibitem{AsiaeeT:2012}
+Asiaee~T., A., Tepper, M., Banerjee, A., Sapiro, G.:
+\newblock If you are happy and you know it... tweet.
+\newblock In: Proceedings of the 21st ACM international conference on
+  Information and knowledge management. CIKM '12, New York, NY, USA, ACM (2012)
+   1602--1606
+
+\bibitem{Hu:2013ESR}
+Hu, X., Tang, L., Tang, J., Liu, H.:
+\newblock Exploiting social relations for sentiment analysis in microblogging.
+\newblock In: Proceedings of the sixth ACM international conference on Web
+  search and data mining. WSDM '13, New York, NY, USA, ACM (2013)  537--546
+
+\bibitem{CalaisGuerra:2011BOT}
+Calais~Guerra, P.H., Veloso, A., Meira, Jr., W., Almeida, V.:
+\newblock From bias to opinion: a transfer-learning approach to real-time
+  sentiment analysis.
+\newblock In: Proceedings of the 17th ACM SIGKDD international conference on
+  Knowledge discovery and data mining. KDD '11, New York, NY, USA, ACM (2011)
+  150--158
+
+\bibitem{Thelwall:2010SSS}
+Thelwall, M., Buckley, K., Paltoglou, G., Cai, D., Kappas, A.:
+\newblock Sentiment in short strength detection informal text.
+\newblock J. Am. Soc. Inf. Sci. Technol. \textbf{61}(12) (December 2010)
+  2544--2558
+
+\bibitem{Thelwall:2012SSD}
+Thelwall, M., Buckley, K., Paltoglou, G.:
+\newblock Sentiment strength detection for the social web.
+\newblock J. Am. Soc. Inf. Sci. Technol. \textbf{63}(1) (January 2012)
+  163--173
+
+\bibitem{Zhao:2012UTM}
+Zhao, T., Li, C., Ding, Q., Li, L.:
+\newblock User-sentiment topic model: refining user's topics with sentiment
+  information.
+\newblock In: Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics.
+  MDS '12, New York, NY, USA, ACM (2012)  10:1--10:9
+
+\bibitem{xsongx:b17}
+Baccianella, A.E.S., Sebastiani, F.:
+\newblock Sentiwordnet 3.0: An enhanced lexical resource for sentiment analysis
+  and opinion mining.
+\newblock In: Proceedings of the Seventh conference on International Language
+  Resources and Evaluation (LREC'10), Valletta, Malta, European Language
+  Resources Association (ELRA) (May 2010)
+
+\bibitem{xsongx:b18}
+Stone, P.J., Dunphy, D.C., Smith, M.S., Ogilvie, D.M.:
+\newblock {The General Inquirer: A Computer Approach to Content Analysis}.
+\newblock MIT Press (1966)
+
+\bibitem{xsongx:b19}
+Ku, L.W., Liang, Y.T., Chen, H.H.:
+\newblock {Opinion extraction, summarization and tracking in news and blog
+  corpora}.
+\newblock In: Proceedings of AAAI-2006 Spring Symposium on Computational
+  Approaches to Analyzing Weblogs. (2006)
+
+\bibitem{xsongx:b20}
+Ku, L.W., Liang, Y.T., Chen, H.H.:
+\newblock {Opinion extraction, summarization and tracking in news and blog
+  corpora}.
+\newblock In: Proceedings of AAAI-2006 Spring Symposium on Computational
+  Approaches to Analyzing Weblogs. (2006)
+
+\bibitem{xsongx:b36}
+Go, A., Bhayani, R., Huang, L.:
+\newblock {Twitter Sentiment Classification using Distant Supervision}.
+\newblock Technical report, Stanford University
+
+\bibitem{xsongx:b37}
+Marchetti-Bowick, M., Chambers, N.:
+\newblock Learning for microblogs with distant supervision: Political
+  forecasting with twitter.
+\newblock In Daelemans, W., Lapata, M., Màrquez, L., eds.: EACL, The
+  Association for Computer Linguistics (2012)  603--612
+
+\bibitem{xsongx:b27}
+Loper, E., Bird, S.:
+\newblock {NLTK: The Natural Language Toolkit} (May 2002)
+
+\bibitem{xsongx:b28}
+Chang, C.C., Lin, C.J.:
+\newblock {LIBSVM}: A library for support vector machines.
+\newblock ACM Transactions on Intelligent Systems and Technology \textbf{2}
+  (2011)  27:1--27:27 Software available at
+  \url{http://www.csie.ntu.edu.tw/~cjlin/libsvm}.
+
+\end{thebibliography}
