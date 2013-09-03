@@ -44,41 +44,41 @@ classifier on general part of features is trained on off-the-shelf labelled idio
 and a context classifier on context-dependent part of features is trained on random tweets retrieved from microblogs in distant supervision manner. 
 Then a semi-supervised framework is developed to combine the general classifier and context classifier into a bootstrapping classifier. 
 Experiments results show that the proposed framework is effective and achieves encouraging accuracy performance. 
-\keywords{sentiment analysis; idioms; general classifier; context classifier}
+\keywords{sentiment analysis; idioms; general classifier; context classifier;microblog}
 \end{abstract}
 
 \section{Introduction}
-Sentiment analysis is the computational study of how opinions, attitudes, emotions, 
-and perspectives are expressed in language, so as to provide tools and techniques for 
-extracting such kind of subjective information from large datasets and summarizing 
-it for successive application such as Business Intelligence, Public Opinion Analysis, Election 
-Prediction, etc\cite{xsongx:b1}. 
-Sentiment classification, which deals with determining sentiment orientation of target text, is classification form of sentiment analysis\cite{xsongx:b2}. 
-Although it can be viewed as a specific text categorization problem, in fact sentiment classification is a more challenging task than text classification, because sentiment expressions critically depend on domains and context\cite{xsongx:b6}.
+\label{intro}
+Sentiment analysis is the computational study of how opinions, attitudes, emotions, and perspectives are expressed in language. 
+Sentiment analysis provide tools and techniques for extracting subjective information from large datasets and summarizing it for successive application such as Business Intelligence, Public Opinion Analysis, and Election Prediction, etc\cite{xsongx:b1}. 
+Sentiment classification, which deals with determining sentiment orientation of target text, is the classification form of sentiment analysis\cite{xsongx:b2}. 
+Although it can be viewed as a special text categorization problem, in fact sentiment classification is a more challenging task than text classification, because sentiment expressions critically depend on domains and context\cite{xsongx:b6}.
 
-With the emergence and prosperity of social networks, the amount of user-generated content \emph{(UGC)} has risen exponentially over the last decade, and such content is now always at our fingertips.
-Mircoblog is one of the most important social network platforms which has absorbed millions of users to update their status(conventionally called tweets in microblog) day and night.
+With the emergence and prosperity of social networks, the amount of user-generated content (UGC) has risen exponentially over the last decade, and such content is now always at our fingertips.
+Mircoblog is one of the most important social networks which has absorbed millions of users to update their status (conventionally called tweets in microblog) day and night.
 Beyond merely displaying news and reports, the mircoblog itself is also a large platform where different opinions are presented and exchanged. 
-Users comment, discuss, compliment, argue and complain over topics they are interested in, sharing their own feelings freely. 
-It has been well recognized that user-generated content of microblog with rich sentiment information can trigger more attention, feedback or participation and have attracted notice of sentiment analysis researchers\cite{DBLP:conf/hicss/StieglitzD12}.
+Users comment, discuss, compliment, argue and complain over topics they are interested in, sharing their own feelings publicly. 
+It has been well recognized that UGC of microblog with rich sentiment information can trigger more attention, feedback or participation, and sentiment analysis researchers have begun to pay more and more attention to microblogs content \cite{DBLP:conf/hicss/StieglitzD12}.
 The distillation of subjective knowledge from such abundant language resources becomes an important part of applications in fields such as commerce, tourism, politics and health. 
-But as a freely-publishing platform, users may use or create new words of abbreviations or acronyms that seldom appear in conventional text documents, for example, words like "coooooool", “OMG",":-(", are intuitive and popular in microblog.
-Though they may provide convenience for online communications for users, it is difficult for computers to accurately identify the semantic meanings of these words. 
+But as a freely-publishing platform, users may use or create new words of abbreviations and acronyms that seldom appear in conventional text documents, for example, words like "coooooool", “OMG",":-(", are intuitive and popular in microblog.
+Though they may provide convenience for online communications of users, it is difficult for computer to accurately identify the semantic meanings of these words. 
 To make situation worse, new words may arise and old words may change their meaning continously in tweets.
-The noisy quantity, informal nature and explosive vocabulary of tweets make sentiment classification of tweets a very difficult and challenging task, because the sentiment in the text of microblog always depends on such particular expressions as emoticons, repeated letters and exclamation, etc. 
-So there are always no universal labelled resources available for sentiment classification. 
-But acquiring human-labelled data is costly and difficult, for manual annotation is very expensive and time-consuming.\\
-Context dependence has been the main challenge Sentiment classification researches of tweets face.
-In this work, we have focused on the context-dependent problem of sentiment classification in the settings of microblog. To solve the problem, we propose a novel semi-supervised framework based on our two rational hypotheses.
-By dividing the feature space into two parts, a general classifier on general part of features is trained on off-the-shelf labelled idiom resources, and a context classifier on context-dependent part of features is trained on random tweets retrieved from microblogs in distant supervision manner. 
-Then a semi-supervised framework is developed to combine the general classifier and context classifier into a bootstrapping classifier.  The experiments carried out in a Chinese microblog platform show that the framework is  effctive and achieves encouraging accuracy performance.\\
-The rest of the paper is organized as follows: Related works are discussed in
-section 2. Our two hypotheses for the feature space are put forward in
-section 3. And our framework of semi-supervised sentiment classification is described in section 4. The results and discussions of the experiment are presented in section
-5. Finally we conclude about our work in section 6.
+The noisy quantity, informal nature and explosive vocabulary of tweets make sentiment classification of tweets a very difficult and challenging task, because the sentiment in tweets often depends on such particular expressions as emoticons, repeated letters and exclamation, etc, which get their semantic meaning only in the context of microblogs. 
+Context dependence has been the main challenge sentiment classification of tweets must face.
+In this work, we have focused on the context-dependent problem of sentiment classification on microblogs. 
+
+To solve the problem, we propose a novel semi-supervised framework based on our two rational hypotheseses.
+Firstly the problem is formulated as feature vector space model of text classification. 
+By dividing the feature space into two parts, a general classifier on general part of features is trained on off-the-shelf labelled idiom resources, and a context classifier on context-dependent part of features is trained on tweets randomly retrieved from microblogs in distant supervision manner. 
+Then a semi-supervised framework is developed to combine the general classifier and context classifier into a bootstrapping classifier. 
+The experiments carried out on a Chinese microblog platform show that the framework is  effective and achieves encouraging accuracy performance.
+
+The rest of the paper is organized as follows: Related works are discussed in Section~\ref{related}. Our two hypotheseses are put forward in
+Section~\ref{problem}, and our framework of semi-supervised sentiment classification is described in Section~\ref{framework}. The results and discussions of the experiment are presented in Section~\ref{experiment}. Finally we conclude about our work in Section~\ref{conclusion}.
 \section{Related Works}
-The task of sentiment analysis has been a hot research area for years. 
-Previous research mainly focuses on product or movie reviews. 
+\label{related}
+The task of sentiment analysis has been a popular research area for years. 
+Previous efforts mainly focuses on product or movie reviews. 
 Generally, in terms of methodology, rule-based approaches and machine learning approaches are two major popular methods, 
 and the machine learning based approaches usually act as an upper bound for other methods to compare with, in that they have higher performance because of the strong generalization ability of classifiers\cite{xsongx:b4,xsongx:b1}.\\
 Recently, the sentiment analysis research has begun to pay more and more attention to the massive user-generated content of social networks such as Twitter\footnote{\url{twitter.com}}. 
@@ -96,6 +96,7 @@ Thelwall et al.\cite{Thelwall:2010SSS,Thelwall:2012SSD} designed SentiStrength, 
 Zhao et al.\cite{Zhao:2012UTM} presented a hierarchical generative model, called user-sentiment topic model (USTM) used in social network analysis to find influential users on topic level with sentiment information.\\
 All works above have tried to adapted their methods to the Twitter context by making use of the network and language characteristics of moricroblog, no matter what arroaches they have taken. However, in this paper, we solve the context-dependent problem from a novel perspective by seperating context-independent part of features from context-dependent part.
 \section{Problem Formulaiton and Solution}
+\label{problem}
 \subsection{Problem Formulation}
 Simply speaking, sentiment classification aims to classify text as predefined sentiment binary polarity classes(negative or positive).  
 Formally, Given document corpus$ D=\lbrace d_{1},\dots ,d_{n} \rbrace$ , and predefined sentiment classes$ C=\lbrace 1,-1\mid\mathrm{positive}=1,\mathrm{negative}=-1 \rbrace$ , the task of sentiment classification is to predict each $ d_{i} $ with a label $ c_{i} $. 
@@ -145,6 +146,7 @@ the machine learning framework?
 the two parts of features?
 \end{itemize*}
 \section{Sentiment Classification Framework}
+\label{framework}
 Besides normal expressions, some languages of microblog are often considered "Mars Language" because of their obscurity. 
 But we could sometimes distinguish the sentiment polarity of the tweet even if some words seem strange to us.
 Intuitively, this kind of phenomenon may be explained by the general part of the text which is used to express the holistic sentiment polarity of the author in any context, and the polarity of general sentiment words are prone to be recognized by anyone independent of context knowledge. 
@@ -218,6 +220,7 @@ Such a procedure iterates until convergence.
 The output of such semi-supervised sentiment classification framework is the predicted results of the sentiment classification. 
 Above all, the whole framework could combine the two classifiers which constructed on divided feature space into a stronger classifier. 
 \section{Experiment}
+\label{experiment}
 \subsection{Experiment Description}
 \paragraph{Dataset:}
 We crawled from the online idiom dictionary of China Education
@@ -269,6 +272,7 @@ As for context classifier, the performance outperforms lexicon classifier becaus
 It even outperforms the upper bound supervised classifier, which proves the effectiveness our proposed framework.
 \end{itemize}
 \section{Conclusion}
+\label{conclusion}
 Context-dependent problem has always been a main challenge of sentiment analysis.
 in this paper, we have proposed a novel semi-supervised framework to get it solved in the social media microblog settings. 
 From a different perspective, we carry out the assumption that feature space be divided into the general part and the context part.
