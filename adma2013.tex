@@ -65,13 +65,13 @@ The noisy quantity, informal nature and explosive vocabulary of tweets make sent
 Context dependence has been the main challenge sentiment classification of tweets must face.
 In this work, we have focused on the context-dependent problem of sentiment classification on microblogs. 
 
-To solve the problem, we propose a novel semi-supervised framework based on our two rational hypothesis.
+To solve the problem, we propose a novel semi-supervised framework based on our two rational hypotheses.
 Firstly the problem is formulated as feature vector space model of text classification. 
 By dividing the feature space into two parts, a general classifier on general part of features is trained on off-the-shelf labelled idiom resources, and a context classifier on context-dependent part of features is trained on tweets randomly retrieved from microblogs in distant supervision manner. 
 Then a semi-supervised framework is developed to combine the general classifier and context classifier into a bootstrapping classifier. 
 The experiments carried out on a Chinese microblog platform show that the framework is  effective and achieves encouraging accuracy performance.
 
-The rest of the paper is organized as follows: Related works are discussed in Section~\ref{related}. Our two hypothesis are put forward in
+The rest of the paper is organized as follows: Related works are discussed in Section~\ref{related}. Our two hypotheses are put forward in
 Section~\ref{problem}, and our framework of semi-supervised sentiment classification is described in Section~\ref{framework}. The results and discussions of the experiment are presented in Section~\ref{experiment}. Finally we conclude about our work in Section~\ref{conclusion}.
 \section{Related Works}
 \label{related}
@@ -102,9 +102,10 @@ To be along with text categorization, each document can be represented as a vect
 For sentiment classification, the weight of each entry in the vector usually is often specified as binary, with weight equals to 1 for feature present in the vector and 0 for absent. 
 Given a training dataset $ X=\lbrace x_{1},\dots,x_{m} \rbrace $, a classifier can be build:
 \begin{equation}
+\label{e1}
   f:X \longrightarrow Y, Y=\lbrace 1,-1 \rbrace \enspace .
 \end{equation} 
-and employ it to predict label for an unseen instance $ x $ by computing $ f \left( x \right)   $, with each instance represent as a vector $ x=\left( w_{1},\dots,w_{v} \right)  $, in which $ w_{i} $ is the $ i $th feature’s weight.
+and employ it to predict label for an unseen instance $ x $ by computing $ f \left( x \right)   $, with each instance represent as a vector $ x=\left( w_{1},\dots,w_{v} \right)  $, in which $ w_{i} $ is the $ i $th feature’s weight. 
 \subsection{Feature Space Division}
 \label{division}
 In previous sentiment classification researches, there is an underlying hypothesis, which implies all features in the text vector represent the document’s sentiment polarity equally. 
@@ -113,44 +114,47 @@ As an example, an English tweet is listed as following:
 
 \textit{@Kid\_Cloudz: Happy birthday to Yessicaaaa! :D lovee you feggit wish you the best day everrrrr!!!!! @030268.}
 
-If simple features are considered, all words would be extracted as equal features to model the sentimental polarity when computationally classifying sentiment polarity of this tweet. 
-However with careful considerations, we could find that such words as "@Kid\_Cloudz, :D, lovee, everrrrr,!!!!!" are more frequently used in the microblog context, while "Happy, birthday, wish, best, thanks" are negative sentiment indicators of text almost in any context. 
-With such intuition, we proposed an feature space division hypothese as:
-\spnewtheorem{hypothese}{Hypothese}{\bfseries}{\rmfamily}
-\textit{\begin{hypothese}
-In the feature space of sentiment
-classification, features can be divided
-into two different parts:
+If simple "bag-of-words" features are considered, all words would be extracted as equal features to model the sentiment when computationally classifying sentiment polarity of this tweet. 
+However with thorough considerations, we can find that such words as "@Kid\_Cloudz, :D, lovee, everrrrr,!!!!!" are mainly used in the  language context of microblogs, while "Happy, birthday, wish, best, thanks" are sentiment indicators of text almost in any language context. 
+With such intuition, we proposed a feature space division hypothesis as:
+\spnewtheorem{hypothesis}{Hypothesis}{\bfseries}{\rmfamily}
+\begin{hypothesis}
+\label{h1}
+In the feature space of sentiment classification, features can be divided into two different parts:
 \begin{itemize*}
-\item context-independent part, i.e. general features, which are indicators of sentiment polarity independent of any context;
-\item context-dependent part, i.e. context features, which indicate sentiment polarity of text in specific context.
+\item context-independent part, i.e. general features, which are indicators of sentiment independent of any language context;
+\item context-dependent part, i.e. context features, which indicate sentiment in specific language context.
 \end{itemize*}
-\end{hypothese}}
-Formally, a text feature vector $ x=\left(  w_{1},\dots,w_{l},w_{l+1},\dots,w_{v} \right) $, could be divided into two parts:
+\end{hypothesis}
+Formally, for the text feature vector of a tweet $ x=\left(  w_{1},\dots,w_{l},w_{l+1},\dots,w_{v} \right) $, it could be divided into two parts:
 \begin{equation}
-x=\lbrace
+\label{e2}
+x=\left\{
 \begin{array}{rcl}
-x_{g}     & \qquad        &:\mathrm{general features}\\
-x_{c}     &  \qquad       &:\mathrm{context features}
+x_{g}     & \qquad        &:\mbox{general features}\\
+x_{c}     &  \qquad       &:\mbox{context features}
 \end{array}
+\right. \enspace .
 \end{equation}
-where $ x_{g}= \left( w_{1},\dots,w_{l}\right) $ denotes the general part of feature space; $ x_{c}= \left( w_{l+1},\dots,w_{v}\right) $ denotes the context dependent part.\\
-Based on hypothese 1, we studied following questions in this paper:
+where $ x_{g}= \left( w_{1},\dots,w_{l}\right) $ denotes the general part of feature space, while $ x_{c}= \left( w_{l+1},\dots,w_{v}\right) $ denotes the context dependent part.
+
+Based on Hypothesis~\ref{h1}, we studied following questions in this paper:
 \begin{itemize*}
-\item how to identify each part of feature space, and what's the meaning to the 
-sentiment classification of tweet?
-\item how to model sentiment polarity of tweet with the two parts of features in 
+\item How to identify each divided part of features, and what does it mean to the 
+sentiment classification of tweets? 
+\item How to model sentiment of tweet with the two divided feature sets in 
 the machine learning framework?
-\item how to find separate training instances for sentiment classifiers based on 
-the two parts of features?
+\item How to construct training dataset for sentiment classifiers based on 
+the two parts of features separately?
 \end{itemize*}
 \section{Sentiment Classification Framework}
 \label{framework}
-Besides normal expressions, some languages of microblog are often considered "Mars Language" because of their obscurity. 
-But we could sometimes distinguish the sentiment polarity of the tweet even if some words seem strange to us.
-Intuitively, this kind of phenomenon may be explained by the general part of the text which is used to express the holistic sentiment polarity of the author in any context, and the polarity of general sentiment words are prone to be recognized by anyone independent of context knowledge. 
-Comparably, in sentiment classification, we put forward that, the sentiment polarity of a document could sometimes still be recognized with only general part of feature space$ x_{g} $. 
-That is to say, if general sentiment knowledge could be modeled, what sentiment polarity a tweet prefers for could be still classified based on such general sentiment models.\\
+Besides traditional expressions, some languages of microblogs are often considered "Mars Language" because of their obscurity.  
+However users could still distinguish the sentiment polarity of the tweet even if some words seem strange to them.
+Intuitively, this kind of phenomenon may be explained by the general part of the tweet which is used to express the holistic sentiment polarity of the author across any context, and the polarity of general sentiment words are prone to be recognized by anyone independent of context knowledge. 
+Comparably, for sentiment classification, we put forward that, the sentiment polarity of a document could sometimes still be recognized with only general part of feature space ($ x_{g} $ in Equation~\ref{e2}). 
+That is to say, if general sentiment knowledge could be modeled, what sentiment polarity a tweet prefers for could still be classified based on such general sentiment models.
+
 In fact, many researchers have tried to establish all kinds of sentimental ontology lexicons to represent general knowledge of human’s sentiment, such as SentiWordNet\cite{xsongx:b17} and General Inquiry\cite{xsongx:b18} in English, Hownet\cite{xsongx:b19} and NTUSD (Chinese Network Sentiment Dictionary) in Chinese\cite{xsongx:b20}, etc. 
 However, some entries of these lexical resources have multiple senses with different sense representing different sentiment polarity, and the exact sense unavoidably depends on the context.
 It seems a rather difficult task to find a general resources to model the context independent knowledge.
@@ -174,10 +178,10 @@ sentiment polarity and a short paraphrase with three general negative words (“
 The example entry provides us with a labelled sentimental instance with general sentiment features and a negative label.
 Most importantly, the sentiment polarity of such instance is independent of any comtext just as the idiom it explains. 
 Based on such observation, another hypothese is proposed as follows:
-\textit{\begin{hypothese}
+\begin{hypothesis}
 The sentiment polarity of the idiom paraphrase is independent of domains as the idiom it
 describes.
-\end{hypothese}}
+\end{hypothesis}
 With Hypothese 2 admitted, we could constructed a training dataset with the features extracted from paraphrases of idioms as general feature vector, the semantic orientation values as sentimental labels. 
 Then a context-independent classifier could be trained to model the general sentiment knowledge.
 \subsection{Context Dependent Classifier}
