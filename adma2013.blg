@@ -4,50 +4,51 @@ The top-level auxiliary file: adma2013.aux
 The style file: splncs.bst
 Database file #1: IDEAL.bib
 Warning--entry type for "xsongx:b27" isn't style-file defined
---line 253 of file IDEAL.bib
+--line 260 of file IDEAL.bib
 A bad cross reference---entry "xsongx:b37"
 refers to entry "conf/eacl/2012", which doesn't exist
 Warning--I didn't find a database entry for "conf/eacl/2012"
 Warning--can't use both author and editor fields in xsongx:b18
+Warning--empty journal in xsongx:b19
 You've used 22 entries,
             2087 wiz_defined-function locations,
-            637 strings with 8755 characters,
-and the built_in function-call counts, 7673 in all, are:
-= -- 863
-> -- 261
-< -- 15
-+ -- 94
-- -- 72
-* -- 499
-:= -- 1005
-add.period$ -- 34
+            641 strings with 8696 characters,
+and the built_in function-call counts, 7759 in all, are:
+= -- 880
+> -- 251
+< -- 16
++ -- 91
+- -- 69
+* -- 512
+:= -- 1012
+add.period$ -- 33
 call.type$ -- 22
 change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 396
-empty$ -- 738
-format.name$ -- 72
-if$ -- 1952
+cite$ -- 24
+duplicate$ -- 401
+empty$ -- 730
+format.name$ -- 69
+if$ -- 1966
 int.to.chr$ -- 0
 int.to.str$ -- 22
 missing$ -- 22
 newline$ -- 112
 num.names$ -- 24
-pop$ -- 81
+pop$ -- 73
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 282
+skip$ -- 289
 stack$ -- 0
-substring$ -- 493
-swap$ -- 192
-text.length$ -- 15
+substring$ -- 533
+swap$ -- 202
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 65
+warning$ -- 2
+while$ -- 68
 width$ -- 24
-write$ -- 272
+write$ -- 274
 (There was 1 error message)

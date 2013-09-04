@@ -1,6 +1,7 @@
 \documentclass{llncs}
 
 \usepackage{amssymb}
+\usepackage{amsmath}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
 \usepackage{url}
@@ -155,73 +156,114 @@ Intuitively, this kind of phenomenon may be explained by the general part of the
 Comparably, for sentiment classification, we put forward that, the sentiment polarity of a document could sometimes still be recognized with only general part of feature space ($ x_{g} $ in Equation~\ref{e2}). 
 That is to say, if general sentiment knowledge could be modeled, what sentiment polarity a tweet prefers for could still be classified based on such general sentiment models. 
 
-In fact, many researchers have tried to establish all kinds of sentimental ontology lexicons to represent general knowledge of human’s sentiment, such as SentiWordNet~\cite{xsongx:b17} and General Inquiry~\cite{xsongx:b18} in English, Hownet\footnote{\url\{http://www.keenage.com}}~\cite{xsongx:b19} and NTUSD (Chinese Network Sentiment Dictionary) in Chinese\cite{xsongx:b20}, etc. 
-However, some entries of these lexical resources have multiple senses with different sense representing different sentiment polarity, and the exact sense unavoidably depends on the context.
+In fact, many researchers have tried to establish all kinds of sentimental ontology lexicons to represent general knowledge of human’s sentiment, such as SentiWordNet~\cite{xsongx:b17} and General Inquiry~\cite{xsongx:b18} in English, Hownet\footnote{\url{http://www.keenage.com}}~\cite{xsongx:b19} and NTUSD~\cite{xsongx:b20} in Chinese, etc. 
+However, some entries of these lexical resources have multiple senses with different sense representing different sentimental polarity, and the exact sentiment of each sense unavoidably depends on the context.
 It seems a rather difficult task to find a general resources to model the context independent knowledge.
-Actually such knowledge exists in many cases, in which one general word or combination of a few words could identify exact sentiment polarity independent of context, such as idioms and proverbs. 
-In this section, we propose a novel semi-supervised framwork to make use of idiom resources to model the general part of tweet sentiment konwledge and combine the model with 
-the context-dependent model to establish a complete sentiment classifier of tweet.
+Actually such knowledge exists in many situations, and many regular language expressions in the form of one general phrase or combination of a few words could identify exact sentiment polarity independent of language context, such as idioms and proverbs. 
 \subsection{General Sentiment Classifier}
+\label{general}
 There are many linguistic resources highly valuable for sentiment classification, of which idiom resources attract interests of this research. 
-Idioms are common phenomena of many languages beside Chinese, such as “castles in the air”, “a bed of thorns”, “bring down the house” in English.
+Idioms are common phenomena of many languages beside Chinese, such as ``castles in the air'', ``a bed of thorns'', and ``bring down the house'' in English.
 The form of idioms is succinct and the meaning is penetrating, which is a quintessence part of the language. 
-Generally speaking, the structure of idioms is fixed and can’t be changed at will; 
-idioms have semantic intactness, which is not generally the simple summation of the literal meaning of each component;
-idioms chiefly use metaphor, exaggerator and comparison in the rhetoric to express its real meaning;
-and most importantly, the sentimental orientation of idioms is independent and unchangeable under any context. 
-There are many off-the-shelf lexical idiom resources in all kinds of languages with entries take the example form as:
+Generally speaking, the structure of idioms is fixed and can’t be changed at will, idioms have semantic intactness, which is not generally the simple summation of the literal meaning of each component, and most importantly, the sentimental polarity of idioms is independent and unchangeable under any context. 
+There are many off-the-shelf idiom lexicons in all kinds of languages with entries taking the example form as:
 
 \textit{castles in the air: a derogatory term, indicate the illusive things or impractical fanciness metaphorically.}
 
-In this example, the entry is composed of three parts: the idiom “castles in the air”, the semantic orientation “a derogatory term” representing negative
-sentiment polarity and a short paraphrase with three general negative words (“illusive, impractical and fanciness”). 
-The example entry provides us with a labelled sentimental instance with general sentiment features and a negative label.
-Most importantly, the sentiment polarity of such instance is independent of any comtext just as the idiom it explains. 
-Based on such observation, another hypothese is proposed as follows:
+In this example, the entry is composed of three parts: the idiom ``castles in the air'', the semantic orientation ``a derogatory term'' representing negative
+sentimental polarity and a short paraphrase with three general negative words (``illusive, impractical and fanciness''). 
+The example provides us with a labelled sentimental instance with general sentiment features and a negative label.
+Most importantly, the sentimental polarity of such instance is independent of any context just as the idiom it explains. 
+Based on such observation, another hypothesis is proposed as follows:
 \begin{hypothesis}
-The sentiment polarity of the idiom paraphrase is independent of domains as the idiom it
-describes.
+\label{h2}
+The sentimental polarity of the idiom paraphrase is independent of language context just as the idiom it describes.
 \end{hypothesis}
-With Hypothese 2 admitted, we could constructed a training dataset with the features extracted from paraphrases of idioms as general feature vector, the semantic orientation values as sentimental labels. 
+With Hypothesis~\ref{h2} admitted, we could constructed a training dataset with the features extracted from paraphrases of idioms as general feature vector, the sentimental polarity of idioms as sentimental labels. 
 Then a context-independent classifier could be trained to model the general sentiment knowledge.
-\subsection{Context Dependent Classifier}
-As the general sentiment features are only one part of all features in the whole feature space, the other part of context-dependent features should be considered in order to capture the subtle clues embedded in the specific sentiment expressions in tweet context.\\
-To model the context-dependent part of tweet, there are two questions must be solved. 
-The first is to identify the context-dependent part of features extracted from tweet. 
-In fact, new expressions of different opinions appears in microblog with the explosive increase of user-generated content make it a rather difficult problem to clearly tell whether each feature is context dependent or not. 
-However, based on the particular characteristics of tweet, we maked assumption that except for the idioms it contains, sentimental polarity of other words in a tweet be context-dependent in that tweet is limited in 140 words only. 
+\subsection{Context Sentiment Classifier}
+\label{context}
+As the general sentiment features are only one part of all features in the whole feature space, the other context-dependent part of features should be considered in order to capture the subtle clues embedded in the specific sentiment expressions in language context of microblogs.
+To model the context-dependent part of tweets, there are two questions must be solved. 
+The first is to identify the context-dependent part of features extracted from tweets. 
+In fact, new expressions appears on microblogs with the explosively increasing of UGC, which makes it rather difficult to clearly tell whether each word is context dependent or not. 
+However tweets are conventionally short with the limitation of 140 characters, and users often express one particular sentiment in one tweet with a few words. 
+Based on the particular characteristics of tweets, we make an assumption that if a tweet contains idioms,  sentimental polarity of words in a tweet are often context-dependent except for the idioms. 
 The second is how to find labelled instances to train the context-dependent classifier. 
-Some researchers have proposed distant supervision to solve the training data shortage of Twitter \cite{xsongx:b36,xsongx:b37}, and accordingly in this paper we establish our training dataset by trying to get as many tweet as possible that contains idioms. 
-By stripping off idioms, we extracted left features as context-dependent features, and took the sentiment polarity of idioms as labels. 
-By this way, we got our noisy labelled dataset and a context-dependent classifier was trained to model the context-dependent knowledge.
+Some researchers have proposed distant supervision to solve the training data shortage of Twitter~\cite{xsongx:b36,xsongx:b37}. 
+In this paper we establish our training dataset in a similar way.
+We retrieve tweets on microblogs and try to get as many tweets as possible that contains idioms. 
+By stripping off idioms, we extracted context-dependent features from left words, and took the sentimental polarity of idioms as labels. 
+So we get our noisy labelled dataset and a context-dependent classifier is trained to model the context-dependent knowledge.
 \subsection{Combination of Two Classifiers}
-Although theoretically the general classifier and context dependent classifier could be able to model different sentiment knowledge separately and classify the sentiment of a tweet accurately to some extent , 
-the coverage and efficiency of such model are limited by the quality and quantity of training resources. 
-Besides, it is obvious that the paraphrase of idiom and tweet segments(lefts by stripping off idioms) is usually short, so the feature vector must be very sparse, which would degrade the effect of such classifiers. 
-For above reasons, a consistent bootstrapping framework of machine learning has been chosen to combine the two general classifiers together. 
-The framework is illustrated in figure 1. 
+\label{combination}
+Although theoretically the general classifier and context classifier could be able to model different sentiment knowledge separately and classify the sentiment of a tweet accurately to some extent, the coverage and efficiency of them are limited by the quality and quantity of training datasets. 
+Besides, it is obvious that the paraphrase of idiom and tweet segments (lefts by stripping off idioms) is usually very short, so the feature vectors of datasets must be very sparse, which degrades the performance of the classifiers. 
+For above reasons, a consistent bootstrapping machine learning framework is chosen to combine the two classifiers together. 
+The framework is illustrated in Figure~\ref{fig1}. 
 \begin{figure} 
 \centering%
-\includegraphics[width=5.5in,height=3.5in]{itse13.jpg}
-\caption{Combined sentiment classification Framework}
-\label{fig:graph}
+\includegraphics[width=5.0in,height=2.2in]{itse13.jpg}
+\caption{The Bootstrapping sentiment classification Framework}
+\label{fig1}
 \end{figure}
-As could be seen from the framework, a general classifier $ P_{g} $ and a context classifier $ P_{c} $ was applied to test dataset to be classified so that the every test instance $ x_{i} $ were labelled $ c_{i}=\lbrace c_{g},c_{c}\rbrace $ initially and given the confidence $ p_{i}= \lbrace p_{g},p_{c}\rbrace$ by each classifier. 
-Then a combined confidence score was calculated by:
+As illustrated in the framework, in an iterating manner, the general classifier $ P_{g} $ and context classifier $ P_{c} $ are applied to test dataset so that the every test instance $ x_{i} $ is predicted labels $ c_{i}=\lbrace c_{g},c_{c}\rbrace $ initially, with confidence $ p_{i}= \lbrace p_{g},p_{c}\rbrace$. 
+Then a combined confidence score is calculated with Equation~\ref{e3}:
 \begin{equation}
-p_{i}=\lbrace
+\label{e3}
+p_{i}=\left\{
 \begin{array}{rcl}
-\lambda\ast p_{g} + \left( 1-\lambda \right) \ast p_{c} \qquad \mathrm{if} \quad c_{g}=c_{c};\\
-0 \qquad \mathrm{if} \quad c_{g} \neq c_{c};
+\lambda\ast p_{g} + \left( 1-\lambda \right) \ast p_{c} \qquad \mbox{if} \quad c_{g}=c_{c};\\
+0 \qquad \mbox{if} \quad c_{g} \neq c_{c};
 \end{array}
+\right. \enspace .
 \end{equation}
-where $ \lambda $ is coefficient to control weight of different part of features. 
-We initialize $ \lambda = 0.5 $ with equal weights of general part and context part of features, and to make combined classifier more adaptable for microblog context,  we  increase the weight of context part step by step with the iteration progressing.
-The test dataset initially labelled as $ c_{i} $ was sorted by confidence $ p_{i} $ in two sentiment classes $ C=\lbrace 1,-1\rbrace $ separately.
-The $ n $  positive and negative instances of highest confident score were selected as new training instances to  improve the context-dependent classifier to a more context-aware classifier. 
+where $ \lambda $ is the coefficient to control weights of different part of features. 
+We initialize $ \lambda = 0.5 $ with equal weights of general part and context part of features, and to make combined classifier more adaptable for microblogs, we  increase the weight of context part step by step with the bootstrapping iteration progressing.
+The test dataset initially labelled as $ c_{i} \left( c_{i} \in \lbrace 1, -1\rbrace \right)$ was sorted with descending confidence $ p_{i} $ for two sentimental categories $ C=\lbrace 1,-1\rbrace $ separately.
+The $ n $  positive and negative instances with top high confidence are selected as new instances to add into the training dataset and improve the context classifier to a more context-aware classifier. 
 Such a procedure iterates until convergence.
-The output of such semi-supervised sentiment classification framework is the predicted results of the sentiment classification. 
+The output of such semi-supervised sentiment classification framework is the predicted results of test dataset. 
 Above all, the whole framework could combine the two classifiers which constructed on divided feature space into a stronger classifier. 
+\section{Classifier Description}
+\label{classifier}
+We adopt the same methods as Pang et al.~\cite{xsongx:b4}, in that they have applied Na\"\i ve Bayes, Maximum Entropy and Support Vector Machine classifiers to identify the effectiveness of machine learning techniques on sentiment classification, and they got satisfying result (accuracy of 82.9\%).
+\subsection{Na\"\i ve Bayes Classifier}
+\label{bayes}
+Naïve Bayesian classifier is the most popular text classification techniques.
+For sentiment classification problem as formulated in Section~\ref{formulation}, to determine which sentimental category $ c_{j} $ a document $ d_{i} $ belongs to, it is needed to compute the posterior probability $ P \left(c_{j} \mid d_{i} \right)$. 
+According to the Bayesian probability and the multinomial model, based on the hypothesis that the probabilities of features $ w_{d_{i},k} $ are independent given document class, Equation~\ref{e4} is got:
+\begin{equation}
+\label{e4}
+P \left(c_{j} \mid d_{i} \right) = \frac{P \left( c_{j} \right)\prod_{k=1}^{| d_{i} |} P \left( w_{d_{i},k} \mid c_{j} \right)}{\sum_{r=1}^{|C|}P \left( c_{r} \right)\prod_{k=1}^{| d_{i} |} P \left( w_{d_{i},k} \mid c_{r} \right)} \enspace .
+\end{equation}
+The class with the highest probability is assigned as the sentimental category of the document $ d_{i} $. 
+\subsection{Maximum Entropy Classifier}
+\label{entropy}
+The Maximum Entropy classifier assigns the class with the higher conditional probability to the sentimental category of document $ d_{i} $ as follows:
+\begin{equation}
+\label{e5}
+P \left( c_{j} \mid d_{i}, \overrightarrow{\theta} \right) = \frac{1}{Z}exp \left( \overrightarrow{\theta}, \overrightarrow{f} \left( d_{i},c_{j} \right) \right) \enspace .
+\end{equation}
+where $ \overrightarrow{\theta} $ denotes the vector of feature weights, $ \overrightarrow{f} \left( d_{i}, c_{j} \right)$ denotes feature function that maps pair $ \left( d_{i}, c_{j} \right) $ to a feature vector, and $ Z $ denotes normalization factor.
+With labelled dataset $ D $, the training procedure is trying to solve such an optimization problem as:
+\begin{equation}
+\label{e6}
+\overrightarrow{\theta^{\ast}}=argmax_{\overrightarrow{\theta}}\prod_{i=1}^{|D|} P \left( c_{j} \mid d_{i}, \overrightarrow{\theta} \right) \enspace .
+\end{equation} 
+\subsection{Support Vector Machine classifier}
+\label{svm}
+Support Vector Machines classifier (SVM), is a kind of discriminative method of machine learning techniques.
+SVM tries to find a decision surface to separate the training data into two classes and makes decisions based on support vectors. 
+In this research, linear SVM has been adopted due to its popularity and sound performance in sentiment classification task.
+The training of SVM is trying to minimize an constraint optimization problem:
+\begin{equation}
+\label{e7}
+\begin{aligned}
+\overrightarrow{\alpha^{\ast}}=argmin \left( -\sum_{i=1}^{n}\alpha_{i} + \sum_{i=1}^{n} \sum_{j=1}^{n}\alpha_{i}\alpha{j} x_{i}x_{j}<\overrightarrow{x_{i}},\overrightarrow{x_{j}}> \right)\\
+\mbox{Subject to:} \sum_{i=1}^{n}\alpha_{i}y_{i}=0 , 0\leqslant \alpha_{i} \leqslant 1
+\end{aligned} \enspace .
+\end{equation}
 \section{Experiment}
 \label{experiment}
 \subsection{Experiment Description}
