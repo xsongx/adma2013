@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.14)  6 SEP 2013 08:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.7.14)  10 SEP 2013 08:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,79 +336,77 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
- [1
+
+Overfull \hbox (7.93262pt too wide) in paragraph at lines 55--65
+[]\OT1/cmr/m/n/10 With the emer-gence and pros-per-ity of mi-croblogs, the amou
+nt of user-generated
+ []
+
+[1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 \c@hypothesis=\count135
-
-[4]
+ [4]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [5] <itse13p.pdf, id=31, 688.82344pt x 301.8778pt>
+ [5]
+<itse13p.pdf, id=31, 688.82344pt x 301.8778pt>
 File: itse13p.pdf Graphic file (type pdf)
  <use itse13p.pdf>
-Package pdftex.def Info: itse13p.pdf used on input line 207.
+Package pdftex.def Info: itse13p.pdf used on input line 206.
 (pdftex.def)             Requested size: 361.35394pt x 158.9903pt.
 
-Overfull \hbox (14.23041pt too wide) in paragraph at lines 207--208
+Overfull \hbox (14.23041pt too wide) in paragraph at lines 206--207
  [][] 
  []
 
-[6] [7 <./itse13p.pdf>]
+[6]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¯ in font cmr10!
+ [7 <./itse13p.pdf>] [8] <lambda.pdf, id=60, 607.26875pt x 341.275pt>
+File: lambda.pdf Graphic file (type pdf)
 
-Overfull \hbox (9.49663pt too wide) in paragraph at lines 259--263
- \OT1/cmr/bx/n/10 Sup-port Vec-tor Ma-chine clas-si-fier.[] \OT1/cmr/m/n/10 Sup
--port Vec-tor Ma-chines clas-si-fier (SVM),
- []
-
-[8] [9] [10] (./adma2013.bbl [11]
+<use lambda.pdf>
+Package pdftex.def Info: lambda.pdf used on input line 302.
+(pdftex.def)             Requested size: 252.93845pt x 144.54263pt.
+ [9] [10 <./lambda.pdf>] (./adma2013.bbl [11]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no   in font cmr9!
-) [12] (./adma2013.aux) ) 
+) [12]
+(./adma2013.aux) ) 
 Here is how much of TeX's memory you used:
- 2910 strings out of 493473
- 37303 string characters out of 3143122
- 109049 words of memory out of 3000000
- 6169 multiletter control sequences out of 15000+200000
+ 2914 strings out of 493473
+ 37358 string characters out of 3143122
+ 106054 words of memory out of 3000000
+ 6173 multiletter control sequences out of 15000+200000
  10780 words of font info for 42 fonts, out of 3000000 for 9000
  965 hyphenation exceptions out of 8191
  37i,20n,24p,436b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
->
-Output written on adma2013.pdf (12 pages, 250483 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on adma2013.pdf (12 pages, 272528 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 131 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

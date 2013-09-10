@@ -10,45 +10,45 @@ refers to entry "conf/eacl/2012", which doesn't exist
 Warning--I didn't find a database entry for "conf/eacl/2012"
 Warning--can't use both author and editor fields in xsongx:b18
 Warning--empty journal in xsongx:b19
-You've used 22 entries,
+You've used 21 entries,
             2087 wiz_defined-function locations,
-            641 strings with 8696 characters,
-and the built_in function-call counts, 7759 in all, are:
-= -- 880
-> -- 251
-< -- 16
-+ -- 91
-- -- 69
-* -- 512
-:= -- 1012
-add.period$ -- 33
-call.type$ -- 22
-change.case$ -- 21
+            634 strings with 8461 characters,
+and the built_in function-call counts, 7283 in all, are:
+= -- 821
+> -- 237
+< -- 15
++ -- 86
+- -- 65
+* -- 482
+:= -- 953
+add.period$ -- 31
+call.type$ -- 21
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 401
-empty$ -- 730
-format.name$ -- 69
-if$ -- 1966
+cite$ -- 23
+duplicate$ -- 377
+empty$ -- 687
+format.name$ -- 65
+if$ -- 1842
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 22
-newline$ -- 112
-num.names$ -- 24
-pop$ -- 73
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 107
+num.names$ -- 23
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 289
+skip$ -- 269
 stack$ -- 0
-substring$ -- 533
-swap$ -- 202
-text.length$ -- 16
+substring$ -- 493
+swap$ -- 189
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 68
-width$ -- 24
-write$ -- 274
+while$ -- 64
+width$ -- 23
+write$ -- 260
 (There was 1 error message)
